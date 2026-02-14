@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Baby Shower - Pankaj & Sunita Paudel">
+<meta property="og:description" content="You're invited to celebrate the upcoming arrival of Baby Girl Paudel! Sunday, Feb 22, 2026 at 3 PM">
+<meta property="og:type" content="website">
+<title>Baby Shower Invitation — Pankaj & Sunita Paudel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f0eb;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 16px;
+  }
+
+  .invitation {
+    width: 100%;
+    max-width: 580px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(170deg, #fef8f4 0%, #fdf0ea 20%, #fce8df 45%, #fbe3d8 60%, #fceae2 80%, #fef6f2 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(180, 140, 100, 0.12), 0 2px 12px rgba(180, 140, 100, 0.08);
+  }
+
+  .invitation::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(240, 190, 160, 0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(212, 175, 115, 0.06) 0%, transparent 50%);
+    z-index: 1;
+    border-radius: 12px;
+  }
+
+  /* ============ FLORAL CLUSTERS ============ */
+  .floral-top-left {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 260px;
+    height: 250px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .bloom {
+    position: absolute;
+  }
+
+  .bloom .petal-bloom {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+  }
+
+  .bloom .bloom-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  /* Top-left large bloom */
+  .bloom-tl-1 { top: 20px; left: 10px; width: 140px; height: 140px; }
+  .bloom-tl-1 .petal-bloom { width: 52px; height: 78px; }
+  .bloom-tl-1 .p1 { background: rgba(232, 160, 140, 0.38); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-tl-1 .p2 { background: rgba(240, 170, 155, 0.33); transform: translate(-50%, -100%) rotate(45deg); }
+  .bloom-tl-1 .p3 { background: rgba(228, 155, 135, 0.36); transform: translate(-50%, -100%) rotate(90deg); }
+  .bloom-tl-1 .p4 { background: rgba(238, 165, 148, 0.31); transform: translate(-50%, -100%) rotate(135deg); }
+  .bloom-tl-1 .p5 { background: rgba(235, 162, 142, 0.35); transform: translate(-50%, -100%) rotate(180deg); }
+  .bloom-tl-1 .p6 { background: rgba(242, 175, 158, 0.3); transform: translate(-50%, -100%) rotate(225deg); }
+  .bloom-tl-1 .p7 { background: rgba(230, 158, 138, 0.33); transform: translate(-50%, -100%) rotate(270deg); }
+  .bloom-tl-1 .p8 { background: rgba(236, 168, 150, 0.32); transform: translate(-50%, -100%) rotate(315deg); }
+  .bloom-tl-1 .bloom-center { width: 24px; height: 24px; background: radial-gradient(circle, rgba(212, 170, 100, 0.55), rgba(200, 155, 90, 0.2)); }
+
+  /* Top-left medium bloom */
+  .bloom-tl-2 { top: 90px; left: 110px; width: 100px; height: 100px; }
+  .bloom-tl-2 .petal-bloom { width: 38px; height: 58px; }
+  .bloom-tl-2 .p1 { background: rgba(245, 185, 170, 0.33); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-tl-2 .p2 { background: rgba(250, 195, 180, 0.28); transform: translate(-50%, -100%) rotate(60deg); }
+  .bloom-tl-2 .p3 { background: rgba(242, 180, 165, 0.31); transform: translate(-50%, -100%) rotate(120deg); }
+  .bloom-tl-2 .p4 { background: rgba(248, 190, 175, 0.29); transform: translate(-50%, -100%) rotate(180deg); }
+  .bloom-tl-2 .p5 { background: rgba(244, 185, 168, 0.32); transform: translate(-50%, -100%) rotate(240deg); }
+  .bloom-tl-2 .p6 { background: rgba(246, 188, 172, 0.27); transform: translate(-50%, -100%) rotate(300deg); }
+  .bloom-tl-2 .bloom-center { width: 18px; height: 18px; background: radial-gradient(circle, rgba(220, 180, 110, 0.5), rgba(200, 155, 90, 0.18)); }
+
+  /* Top-left small bud */
+  .bud-tl { position: absolute; top: 40px; left: 140px; width: 40px; height: 40px; }
+  .bud-tl::before { content: ''; position: absolute; width: 20px; height: 32px; border-radius: 50%; background: rgba(235, 160, 145, 0.38); top: 4px; left: 5px; transform: rotate(-15deg); }
+  .bud-tl::after { content: ''; position: absolute; width: 18px; height: 30px; border-radius: 50%; background: rgba(240, 170, 155, 0.33); top: 2px; left: 16px; transform: rotate(15deg); }
+
+  .leaf { position: absolute; border-radius: 0 50% 0 50%; }
+  .leaf-tl-1 { width: 62px; height: 26px; background: rgba(140, 162, 120, 0.2); top: 140px; left: 20px; transform: rotate(-30deg); }
+  .leaf-tl-2 { width: 50px; height: 22px; background: rgba(135, 158, 115, 0.17); top: 155px; left: 80px; transform: rotate(15deg); }
+  .leaf-tl-3 { width: 68px; height: 28px; background: rgba(145, 165, 125, 0.18); top: 60px; left: 130px; transform: rotate(-50deg); }
+  .leaf-tl-4 { width: 45px; height: 20px; background: rgba(138, 160, 118, 0.15); top: 180px; left: 45px; transform: rotate(25deg); }
+
+  /* Top Right cluster */
+  .floral-top-right {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 250px;
+    height: 240px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .bloom-tr-1 { position: absolute; top: 25px; right: 15px; width: 130px; height: 130px; }
+  .bloom-tr-1 .petal-bloom { width: 48px; height: 72px; }
+  .bloom-tr-1 .p1 { background: rgba(220, 145, 130, 0.36); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-tr-1 .p2 { background: rgba(228, 155, 140, 0.31); transform: translate(-50%, -100%) rotate(51deg); }
+  .bloom-tr-1 .p3 { background: rgba(224, 150, 135, 0.34); transform: translate(-50%, -100%) rotate(102deg); }
+  .bloom-tr-1 .p4 { background: rgba(232, 160, 145, 0.3); transform: translate(-50%, -100%) rotate(153deg); }
+  .bloom-tr-1 .p5 { background: rgba(226, 152, 138, 0.33); transform: translate(-50%, -100%) rotate(204deg); }
+  .bloom-tr-1 .p6 { background: rgba(230, 158, 142, 0.29); transform: translate(-50%, -100%) rotate(255deg); }
+  .bloom-tr-1 .p7 { background: rgba(222, 148, 132, 0.32); transform: translate(-50%, -100%) rotate(306deg); }
+  .bloom-tr-1 .bloom-center { width: 22px; height: 22px; background: radial-gradient(circle, rgba(215, 175, 105, 0.55), rgba(195, 150, 85, 0.2)); }
+
+  .bloom-tr-2 { position: absolute; top: 5px; right: 130px; width: 85px; height: 85px; }
+  .bloom-tr-2 .petal-bloom { width: 32px; height: 50px; }
+  .bloom-tr-2 .p1 { background: rgba(248, 195, 185, 0.33); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-tr-2 .p2 { background: rgba(252, 200, 190, 0.28); transform: translate(-50%, -100%) rotate(72deg); }
+  .bloom-tr-2 .p3 { background: rgba(246, 192, 182, 0.31); transform: translate(-50%, -100%) rotate(144deg); }
+  .bloom-tr-2 .p4 { background: rgba(250, 198, 188, 0.29); transform: translate(-50%, -100%) rotate(216deg); }
+  .bloom-tr-2 .p5 { background: rgba(244, 190, 180, 0.3); transform: translate(-50%, -100%) rotate(288deg); }
+  .bloom-tr-2 .bloom-center { width: 15px; height: 15px; background: radial-gradient(circle, rgba(218, 178, 108, 0.45), rgba(200, 155, 85, 0.15)); }
+
+  .leaf-tr-1 { position: absolute; width: 58px; height: 24px; background: rgba(140, 162, 120, 0.19); top: 120px; right: 40px; transform: rotate(35deg); border-radius: 0 50% 0 50%; }
+  .leaf-tr-2 { position: absolute; width: 48px; height: 20px; background: rgba(135, 158, 115, 0.16); top: 75px; right: 150px; transform: rotate(-25deg); border-radius: 0 50% 0 50%; }
+  .leaf-tr-3 { position: absolute; width: 65px; height: 27px; background: rgba(142, 164, 122, 0.18); top: 145px; right: 90px; transform: rotate(55deg); border-radius: 0 50% 0 50%; }
+
+  /* Bottom Left cluster */
+  .floral-bottom-left {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 270px;
+    height: 270px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .bloom-bl-1 { position: absolute; bottom: 30px; left: 15px; width: 135px; height: 135px; }
+  .bloom-bl-1 .petal-bloom { width: 50px; height: 75px; }
+  .bloom-bl-1 .p1 { background: rgba(225, 148, 132, 0.37); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-bl-1 .p2 { background: rgba(235, 160, 145, 0.32); transform: translate(-50%, -100%) rotate(45deg); }
+  .bloom-bl-1 .p3 { background: rgba(230, 155, 138, 0.35); transform: translate(-50%, -100%) rotate(90deg); }
+  .bloom-bl-1 .p4 { background: rgba(238, 165, 148, 0.3); transform: translate(-50%, -100%) rotate(135deg); }
+  .bloom-bl-1 .p5 { background: rgba(228, 152, 136, 0.34); transform: translate(-50%, -100%) rotate(180deg); }
+  .bloom-bl-1 .p6 { background: rgba(236, 162, 145, 0.31); transform: translate(-50%, -100%) rotate(225deg); }
+  .bloom-bl-1 .p7 { background: rgba(232, 158, 140, 0.33); transform: translate(-50%, -100%) rotate(270deg); }
+  .bloom-bl-1 .p8 { background: rgba(234, 160, 142, 0.29); transform: translate(-50%, -100%) rotate(315deg); }
+  .bloom-bl-1 .bloom-center { width: 24px; height: 24px; background: radial-gradient(circle, rgba(215, 175, 105, 0.55), rgba(195, 150, 85, 0.2)); }
+
+  .bloom-bl-2 { position: absolute; bottom: 100px; left: 120px; width: 90px; height: 90px; }
+  .bloom-bl-2 .petal-bloom { width: 34px; height: 52px; }
+  .bloom-bl-2 .p1 { background: rgba(242, 180, 168, 0.33); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-bl-2 .p2 { background: rgba(248, 190, 178, 0.28); transform: translate(-50%, -100%) rotate(72deg); }
+  .bloom-bl-2 .p3 { background: rgba(244, 184, 172, 0.31); transform: translate(-50%, -100%) rotate(144deg); }
+  .bloom-bl-2 .p4 { background: rgba(246, 188, 175, 0.29); transform: translate(-50%, -100%) rotate(216deg); }
+  .bloom-bl-2 .p5 { background: rgba(240, 182, 170, 0.3); transform: translate(-50%, -100%) rotate(288deg); }
+  .bloom-bl-2 .bloom-center { width: 16px; height: 16px; background: radial-gradient(circle, rgba(218, 178, 108, 0.45), rgba(200, 155, 85, 0.15)); }
+
+  .leaf-bl-1 { position: absolute; width: 65px; height: 27px; background: rgba(140, 162, 120, 0.2); bottom: 140px; left: 25px; transform: rotate(30deg); border-radius: 0 50% 0 50%; }
+  .leaf-bl-2 { position: absolute; width: 55px; height: 23px; background: rgba(135, 158, 115, 0.17); bottom: 190px; left: 75px; transform: rotate(-20deg); border-radius: 0 50% 0 50%; }
+  .leaf-bl-3 { position: absolute; width: 70px; height: 29px; background: rgba(145, 165, 125, 0.18); bottom: 70px; left: 130px; transform: rotate(50deg); border-radius: 0 50% 0 50%; }
+
+  /* Bottom Right cluster */
+  .floral-bottom-right {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 260px;
+    height: 260px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .bloom-br-1 { position: absolute; bottom: 35px; right: 10px; width: 150px; height: 150px; }
+  .bloom-br-1 .petal-bloom { width: 56px; height: 82px; }
+  .bloom-br-1 .p1 { background: rgba(218, 140, 125, 0.38); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-br-1 .p2 { background: rgba(228, 152, 138, 0.33); transform: translate(-50%, -100%) rotate(40deg); }
+  .bloom-br-1 .p3 { background: rgba(222, 146, 130, 0.36); transform: translate(-50%, -100%) rotate(80deg); }
+  .bloom-br-1 .p4 { background: rgba(232, 158, 142, 0.31); transform: translate(-50%, -100%) rotate(120deg); }
+  .bloom-br-1 .p5 { background: rgba(220, 142, 128, 0.35); transform: translate(-50%, -100%) rotate(160deg); }
+  .bloom-br-1 .p6 { background: rgba(230, 155, 140, 0.32); transform: translate(-50%, -100%) rotate(200deg); }
+  .bloom-br-1 .p7 { background: rgba(224, 148, 132, 0.34); transform: translate(-50%, -100%) rotate(240deg); }
+  .bloom-br-1 .p8 { background: rgba(226, 150, 135, 0.3); transform: translate(-50%, -100%) rotate(280deg); }
+  .bloom-br-1 .p9 { background: rgba(222, 146, 130, 0.33); transform: translate(-50%, -100%) rotate(320deg); }
+  .bloom-br-1 .bloom-center { width: 26px; height: 26px; background: radial-gradient(circle, rgba(212, 170, 100, 0.55), rgba(195, 148, 85, 0.2)); }
+
+  .bloom-br-2 { position: absolute; bottom: 120px; right: 130px; width: 80px; height: 80px; }
+  .bloom-br-2 .petal-bloom { width: 30px; height: 46px; }
+  .bloom-br-2 .p1 { background: rgba(245, 190, 178, 0.33); transform: translate(-50%, -100%) rotate(0deg); }
+  .bloom-br-2 .p2 { background: rgba(250, 198, 186, 0.28); transform: translate(-50%, -100%) rotate(72deg); }
+  .bloom-br-2 .p3 { background: rgba(248, 194, 182, 0.31); transform: translate(-50%, -100%) rotate(144deg); }
+  .bloom-br-2 .p4 { background: rgba(246, 192, 180, 0.29); transform: translate(-50%, -100%) rotate(216deg); }
+  .bloom-br-2 .p5 { background: rgba(244, 188, 176, 0.3); transform: translate(-50%, -100%) rotate(288deg); }
+  .bloom-br-2 .bloom-center { width: 14px; height: 14px; background: radial-gradient(circle, rgba(218, 178, 108, 0.45), rgba(200, 155, 85, 0.15)); }
+
+  .leaf-br-1 { position: absolute; width: 60px; height: 25px; background: rgba(140, 162, 120, 0.19); bottom: 155px; right: 35px; transform: rotate(-35deg); border-radius: 0 50% 0 50%; }
+  .leaf-br-2 { position: absolute; width: 50px; height: 21px; background: rgba(135, 158, 115, 0.16); bottom: 85px; right: 160px; transform: rotate(20deg); border-radius: 0 50% 0 50%; }
+  .leaf-br-3 { position: absolute; width: 58px; height: 24px; background: rgba(142, 164, 122, 0.18); bottom: 40px; right: 165px; transform: rotate(-45deg); border-radius: 0 50% 0 50%; }
+
+  /* Scattered petals */
+  .scattered-petal { position: absolute; border-radius: 50%; z-index: 2; pointer-events: none; }
+  .sp-1 { width: 14px; height: 22px; background: rgba(238, 170, 155, 0.22); top: 240px; left: 50px; transform: rotate(45deg); }
+  .sp-2 { width: 11px; height: 18px; background: rgba(242, 178, 164, 0.2); top: 320px; right: 45px; transform: rotate(-30deg); }
+  .sp-3 { width: 13px; height: 20px; background: rgba(236, 165, 150, 0.18); bottom: 320px; left: 40px; transform: rotate(60deg); }
+  .sp-4 { width: 10px; height: 16px; background: rgba(244, 182, 168, 0.19); top: 420px; right: 35px; transform: rotate(-55deg); }
+  .sp-5 { width: 12px; height: 19px; background: rgba(240, 175, 160, 0.18); bottom: 280px; right: 50px; transform: rotate(35deg); }
+
+  /* Gold sparkles */
+  .sparkle { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(212, 175, 115, 0.5), transparent); z-index: 4; pointer-events: none; }
+  .sparkle-1 { width: 4px; height: 4px; top: 150px; left: 220px; }
+  .sparkle-2 { width: 3px; height: 3px; top: 110px; right: 200px; }
+  .sparkle-3 { width: 5px; height: 5px; bottom: 180px; left: 240px; }
+  .sparkle-4 { width: 3px; height: 3px; top: 340px; right: 200px; }
+  .sparkle-5 { width: 4px; height: 4px; bottom: 240px; right: 230px; }
+  .sparkle-6 { width: 3px; height: 3px; top: 470px; left: 200px; }
+  .sparkle-7 { width: 4px; height: 4px; bottom: 350px; left: 260px; }
+  .sparkle-8 { width: 3px; height: 3px; top: 560px; right: 210px; }
+
+  /* Border */
+  .border-frame {
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(195, 155, 95, 0.28);
+    z-index: 5;
+    pointer-events: none;
+    border-radius: 4px;
+  }
+  .border-frame::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 0.5px solid rgba(195, 155, 95, 0.15);
+    border-radius: 2px;
+  }
+
+  /* ============ CONTENT ============ */
+  .content {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 40px 60px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .content { padding: 60px 24px 50px; }
+  }
+
+  .top-ornament {
+    color: rgba(195, 155, 95, 0.6);
+    font-size: 20px;
+    letter-spacing: 14px;
+    margin-bottom: 6px;
+  }
+
+  .youre-invited {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    color: #c4a07a;
+    margin-bottom: 18px;
+  }
+
+  .main-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 56px;
+    color: #c09a6b;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 2px rgba(192, 154, 107, 0.1);
+  }
+  @media (max-width: 480px) {
+    .main-title { font-size: 44px; }
+  }
+
+  .main-title em {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .floral-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    width: 320px;
+    max-width: 80%;
+  }
+
+  .floral-divider-line {
+    flex: 1;
+    height: 0.5px;
+    background: linear-gradient(90deg, transparent, rgba(195, 155, 95, 0.4), transparent);
+  }
+
+  .floral-divider-center {
+    color: rgba(195, 155, 95, 0.5);
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .honoring {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #c4a07a;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+
+  .parents-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #d4956e;
+    line-height: 1.3;
+  }
+  @media (max-width: 480px) {
+    .parents-name { font-size: 26px; }
+  }
+
+  .ampersand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    color: #c9a87c;
+    margin: 1px 0;
+  }
+
+  .baby-girl-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 28px;
+    margin: 16px 0 6px;
+    background: linear-gradient(135deg, rgba(232, 170, 160, 0.22), rgba(242, 190, 180, 0.12));
+    border: 1px solid rgba(220, 160, 150, 0.25);
+    border-radius: 50px;
+  }
+
+  .baby-girl-badge span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11.5px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #d4956e;
+  }
+
+  .heart-icon { color: #e0a8a0; font-size: 10px; }
+
+  .details-section {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .detail-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .detail-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10.5px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #c4a07a;
+  }
+
+  .detail-value {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: #8a6d55;
+    line-height: 1.4;
+  }
+
+  .detail-value-small {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #9a7d65;
+    line-height: 1.45;
+  }
+
+  /* Map link */
+  .venue-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c09a6b;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(192, 154, 107, 0.3);
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+  }
+  .venue-link:hover {
+    color: #a8804e;
+    border-bottom-color: rgba(168, 128, 78, 0.5);
+  }
+
+  .rsvp-section {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .rsvp-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 10.5px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #c4a07a;
+  }
+
+  .rsvp-date {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #8a6d55;
+  }
+
+  /* ============ CTA BUTTONS ============ */
+  .cta-section {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, #c9a06c, #d4ad78);
+    color: #fff;
+    border: none;
+    box-shadow: 0 3px 15px rgba(201, 160, 108, 0.3);
+  }
+  .cta-primary:hover {
+    background: linear-gradient(135deg, #b8904e, #c9a06c);
+    box-shadow: 0 5px 20px rgba(201, 160, 108, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: #c09a6b;
+    border: 1.5px solid rgba(192, 154, 107, 0.4);
+  }
+  .cta-secondary:hover {
+    background: rgba(192, 154, 107, 0.06);
+    border-color: rgba(192, 154, 107, 0.6);
+    transform: translateY(-1px);
+  }
+
+  .cta-icon {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  /* Footer */
+  .footer-note {
+    margin-top: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(160, 135, 111, 0.6);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="invitation">
+
+    <!-- FLORAL CLUSTERS -->
+    <div class="floral-top-left">
+      <div class="bloom bloom-tl-1">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div><div class="petal-bloom p4"></div>
+        <div class="petal-bloom p5"></div><div class="petal-bloom p6"></div><div class="petal-bloom p7"></div><div class="petal-bloom p8"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="bloom bloom-tl-2">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div>
+        <div class="petal-bloom p4"></div><div class="petal-bloom p5"></div><div class="petal-bloom p6"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="bud-tl"></div>
+      <div class="leaf leaf-tl-1"></div><div class="leaf leaf-tl-2"></div><div class="leaf leaf-tl-3"></div><div class="leaf leaf-tl-4"></div>
+    </div>
+
+    <div class="floral-top-right">
+      <div class="bloom bloom-tr-1">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div><div class="petal-bloom p4"></div>
+        <div class="petal-bloom p5"></div><div class="petal-bloom p6"></div><div class="petal-bloom p7"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="bloom bloom-tr-2">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div>
+        <div class="petal-bloom p4"></div><div class="petal-bloom p5"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="leaf-tr-1"></div><div class="leaf-tr-2"></div><div class="leaf-tr-3"></div>
+    </div>
+
+    <div class="floral-bottom-left">
+      <div class="bloom bloom-bl-1">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div><div class="petal-bloom p4"></div>
+        <div class="petal-bloom p5"></div><div class="petal-bloom p6"></div><div class="petal-bloom p7"></div><div class="petal-bloom p8"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="bloom bloom-bl-2">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div>
+        <div class="petal-bloom p4"></div><div class="petal-bloom p5"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="leaf-bl-1"></div><div class="leaf-bl-2"></div><div class="leaf-bl-3"></div>
+    </div>
+
+    <div class="floral-bottom-right">
+      <div class="bloom bloom-br-1">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div><div class="petal-bloom p4"></div>
+        <div class="petal-bloom p5"></div><div class="petal-bloom p6"></div><div class="petal-bloom p7"></div><div class="petal-bloom p8"></div>
+        <div class="petal-bloom p9"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="bloom bloom-br-2">
+        <div class="petal-bloom p1"></div><div class="petal-bloom p2"></div><div class="petal-bloom p3"></div>
+        <div class="petal-bloom p4"></div><div class="petal-bloom p5"></div>
+        <div class="bloom-center"></div>
+      </div>
+      <div class="leaf-br-1"></div><div class="leaf-br-2"></div><div class="leaf-br-3"></div>
+    </div>
+
+    <!-- Scattered petals -->
+    <div class="scattered-petal sp-1"></div><div class="scattered-petal sp-2"></div><div class="scattered-petal sp-3"></div>
+    <div class="scattered-petal sp-4"></div><div class="scattered-petal sp-5"></div>
+
+    <!-- Gold sparkles -->
+    <div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><div class="sparkle sparkle-3"></div>
+    <div class="sparkle sparkle-4"></div><div class="sparkle sparkle-5"></div><div class="sparkle sparkle-6"></div>
+    <div class="sparkle sparkle-7"></div><div class="sparkle sparkle-8"></div>
+
+    <!-- Border -->
+    <div class="border-frame"></div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="top-ornament">❀ &nbsp; ✿ &nbsp; ❀</div>
+      <div class="youre-invited">You're Invited to a</div>
+
+      <div class="main-title"><em>Baby</em> Shower</div>
+
+      <div class="floral-divider">
+        <div class="floral-divider-line"></div>
+        <div class="floral-divider-center">✿ ❀ ✿</div>
+        <div class="floral-divider-line"></div>
+      </div>
+
+      <div class="honoring">In Honor Of</div>
+
+      <div class="parents-name">Pankaj R. Paudel</div>
+      <div class="ampersand">&amp;</div>
+      <div class="parents-name">Sunita Pandit Paudel</div>
+
+      <div class="baby-girl-badge">
+        <span class="heart-icon">♥</span>
+        <span>It's a Girl</span>
+        <span class="heart-icon">♥</span>
+      </div>
+
+      <div class="details-section">
+        <div class="detail-row">
+          <span class="detail-label">Date</span>
+          <span class="detail-value">Sunday, February 22, 2026</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Time</span>
+          <span class="detail-value">3:00 PM – 8:00 PM</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Venue</span>
+          <span class="detail-value-small">15222 Winthrop Manor Way<br>Cypress, Texas 77429</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=15222+Winthrop+Manor+Way+Cypress+TX+77429" target="_blank" rel="noopener" class="venue-link">
+            📍 Open in Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="rsvp-section">
+        <span class="rsvp-label">Kindly RSVP By</span>
+        <span class="rsvp-date">February 19, 2026</span>
+      </div>
+
+      <!-- LIVE CLICKABLE BUTTONS -->
+      <div class="cta-section">
+        <a href="https://www.amazon.com/baby-reg/pankajr-paudel-march-2026-cypress/26E7KJC5ANUGN?ref_=cm_sw_r_apin_dp_Y414K7JEHKW3YZ8X6BBR&language=en-US" target="_blank" rel="noopener" class="cta-btn cta-primary">
+          <span class="cta-icon">🎁</span>
+          View Baby Registry
+        </a>
+
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Baby+Shower+-+Pankaj+%26+Sunita+Paudel&dates=20260222T150000/20260222T200000&location=15222+Winthrop+Manor+Way,+Cypress,+TX+77429&details=Baby+Shower+in+honor+of+Pankaj+R.+Paudel+%26+Sunita+Pandit+Paudel.+It%27s+a+girl!" target="_blank" rel="noopener" class="cta-btn cta-secondary">
+          <span class="cta-icon">📅</span>
+          Add to Calendar
+        </a>
+      </div>
+
+      <div class="footer-note">We can't wait to celebrate with you!</div>
+    </div>
+  </div>
+</body>
+</html>
